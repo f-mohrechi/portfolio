@@ -4,36 +4,36 @@ import React from 'react'
 export default function Header() {
 
   const data = [
-    { name: "About", link: "" },
-    { name: "Experience", link: "" },
-    { name: "Work", link: "" },
-    { name: "Contact", link: "" },
+    { name: "About", link: "#" },
+    { name: "Experience", link: "#" },
+    { name: "Work", link: "#" },
+    { name: "Contact", link: "#" },
   ]
   return (
-    <div className='primary_bg py-2' style={{ width: "100%" }}>
+    <div className='bg-neutral-900 py-3 w-full'>
 
-      <div className='container' style={{ height: "100%" }}>
+      <div className='container mx-auto h-full'>
 
-        <div style={{ display: "grid", gridTemplateColumns: "1fr 1fr", height: "100%" }}>
+        <div className='flex justify-between h-full'>
 
-          <div className=''>
-            <img src='/images/fm (1).png' style={{ width: 65 }} />
+          <div className='w-16'>
+            <img src='/images/FM2.png' />
           </div>
 
-          <div style={{ display: 'flex', justifyContent: "end", alignItems: "center" }}>
-            <div className='d-none d-md-flex'>
+          <div className='justify-end flex md:justify-center items-center'>
+            <div className='hidden md:flex'>
               {data.map((item, index) => {
                 return (
-                  <Link href="#">
-                    <p className='color1 px-4'>{item.name}</p>
+                  <Link href={item.link}>
+                    <p className='text-zinc-400 px-4'>{item.name}</p>
                   </Link>
                 )
               })}
             </div>
 
 
-            <div className='pl-5'>
-              <button className='color2 bg4 px-3 py-1 rounded-lg'>
+            <div className='pl-4'>
+              <button className='text-neutral-900 bg-amber-100 px-3 py-1 rounded-lg'>
                 <p>Resume</p>
               </button>
             </div>
